@@ -6,10 +6,12 @@ import com.management.repo.StudentRepository;
 import com.management.service.StudentService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class StudentServiceImpl implements StudentService {
 
     @Autowired
