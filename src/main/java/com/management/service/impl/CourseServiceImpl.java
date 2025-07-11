@@ -1,7 +1,6 @@
 package com.management.service.impl;
 
 import com.management.dto.CourseDto;
-import com.management.dto.StudentDto;
 import com.management.entity.Course;
 import com.management.repo.CourseRepository;
 import com.management.service.CourseService;
