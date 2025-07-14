@@ -28,8 +28,7 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public CourseDto getCourseById(Long id) {
-        Course course = courseRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Course not found"));
+        Course course = (Course)courseRepository.findById(id).orElseThrow(() -> new RuntimeException("Course not found"));
         return modelMapper.map(course, CourseDto.class);
     }
 

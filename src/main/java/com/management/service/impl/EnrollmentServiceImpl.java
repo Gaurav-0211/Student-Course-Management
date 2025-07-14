@@ -51,7 +51,7 @@ public class EnrollmentServiceImpl implements EnrollmentService {
 
     @Override
     public List<EnrollmentDto> getEnrollmentsByStudent(Long studentId) {
-        return enrollmentRepository.findByStudent_Id(studentId)
+        return enrollmentRepository.findByStudentId(studentId)
                 .stream()
                 .map(e -> modelMapper.map(e, EnrollmentDto.class))
                 .collect(Collectors.toList());
@@ -59,7 +59,7 @@ public class EnrollmentServiceImpl implements EnrollmentService {
 
     @Override
     public List<EnrollmentDto> getEnrollmentsByCourse(Long courseId) {
-        return enrollmentRepository.findByCourse_Id(courseId)
+        return enrollmentRepository.findByCourseId(courseId)
                 .stream()
                 .map(e -> modelMapper.map(e, EnrollmentDto.class))
                 .collect(Collectors.toList());

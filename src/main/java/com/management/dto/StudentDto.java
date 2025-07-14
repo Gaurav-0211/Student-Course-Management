@@ -1,11 +1,15 @@
 package com.management.dto;
 
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.List;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
 public class StudentDto {
     private Long id;
     private String firstName;
