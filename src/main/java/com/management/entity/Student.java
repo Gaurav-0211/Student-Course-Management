@@ -21,10 +21,10 @@ public class Student {
     private Long id;
 
     @Column(name= "f_name", nullable = false)
-    private String f_name;
+    private String firstName;
 
     @Column(name = "l_name", nullable = false)
-    private String l_name;
+    private String lastName;
 
     @Column(nullable = false, unique = true)
     private String email;
@@ -32,6 +32,6 @@ public class Student {
     @Column(name = "enrollment_date")
     private LocalDate doe;
 
-    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, fetch=FetchType.EAGER, orphanRemoval = true)
     private List<Enrollment> enrollments;
 }

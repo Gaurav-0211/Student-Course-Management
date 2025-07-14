@@ -15,6 +15,6 @@ public class StudentDto {
     private String firstName;
     private String lastName;
     private String email;
-    private LocalDate enrollmentDate;
+    private LocalDate doe;
     private List<Long> courseIds;
 }
